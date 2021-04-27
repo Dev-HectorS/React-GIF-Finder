@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  background: #faf6f9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 20px;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  outline: none !important;
+  border: solid 1px grey;
+  border-radius: 2px;
+  width: 200px;
+  height: 20px;
+  padding: 2px;
+}
+
+img {
+  width: 100%;
+}
+
+.card-grid{
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+}
+
+.card{
+  align-items: flex-start;
+  justify-content: center;
+  width: 12%;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  .card{
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 480px) { 
+  #navbar {
+    flex-direction: column;
+  }
+  
+  .card{
+    width: 40%;
+    margin: 5px;
+    padding: 5px;
+  }
+  }
+
+  .search-bar {
+    width: 100%;
 }
